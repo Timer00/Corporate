@@ -1,43 +1,38 @@
 {
   "config": {
     "colors": {
-      "backgroundColor": "#FFFFFF",
-      "lifeContainerInnerColor": "#FFFFFF",
-      "lifeContainerOuterColor": "rgb(0,191,255)",
-      "healingEffectColor": "#FFFFFF",
-      "shipOuterColor": "black",
-      "shipInnerColor": "red",
-      "bulletColor": "red",
-      "asteroidColor": "#828483",
-      "cannonColor": "red",
-      "particles": "black"
+      "backgroundColor": "#FFFFFF"
     },
     "images": {
-      "canon": "http://timer00.github.io/Asteroids/imagens/canon.png",
-      "healthContainerUpgrade": "http://timer00.github.io/Asteroids/imagens/health container.png",
-      "heart": "http://timer00.github.io/Asteroids/imagens/heart.png",
-      "logoFull": "http://timer00.github.io/Asteroids/imagens/logoFull.png",
-      "shipUpgrades": "http://timer00.github.io/Asteroids/imagens/ship.png",
-      "shrink": "http://timer00.github.io/Asteroids/imagens/shrink.png",
-      "speed": "http://timer00.github.io/Asteroids/imagens/speed.png",
-      "asteroid": "",
-      "ship": "",
-      "bullet": "http://timer00.github.io/Asteroids/imagens/speed.png",
-      "healthContainer": "",
-      "background": "http://timer00.github.io/Asteroids/imagens/background.png"
+      "tutorial-icon": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/hu1rc-tutorial1.png",
+      "tutorial-icon-2": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/ucrnh-tutorial2.png"
     },
     "strings": {
-      "playButton": "Play",
-      "shipUpgrades": "Ship Upgrades",
-      "healingUpgrades": "Healing Upgrades",
-      "gameOver": "Game Over",
-      "seconds": "Seconds",
-      "health": "Life",
-      "money": "Money",
-      "playAgain": "-Play Again-",
-      "survived": "Survived",
-      "instructionsMovement": "WASD, Arrow keys or Touch to MOVE",
-      "instructionsShooting": "Left click, space or Touch to SHOOT"
+      "upgrades": "UPGRADES",
+      "stats": "STATS",
+      "statistics": "STATISTICS",
+      "totalMoney": "Total money earned:",
+      "constructionSpent": "Construction expenses",
+      "upgradesSpent": "Upgrade expenses",
+      "maintenanceSpent": "Maintenance Expenses",
+      "netProfit": "NET PROFIT",
+      "revenueExpenditure": "REVENUE and EXPENDITURE",
+      "gross": "Gross per sec",
+      "maintenanceSec": "Maintenance per sec",
+      "netIncome": "Net income per sec",
+      "purchase": "PURCHASE",
+      "tutorial_title_1": "TUTORIAL",
+      "tutorial_title_2": "TUTORIAL",
+      "tutorial_title_3": "INPUT",
+      "tutorial_subtitle_1": "CONTROLS",
+      "tutorial_subtitle_2": "GAMEPLAY",
+      "tutorial_subtitle_3": "COMPANY NAME",
+      "tutorial_button_1": "NEXT",
+      "tutorial_button_2": "NEXT",
+      "tutorial_button_3": "PLAY",
+      "tutorial_text_1": "The game has only simple buttons that can be clicked via mouse or touch.",
+      "tutorial_text_2": "Your objective is to build the tallest tower possible without going bankrupt. Buy upgrades to keep the money inflow and keep buying new floors!",
+      "tutorial_text_3": "Finally, write a name for your company! (max 10 characters)"
     },
     "floors-and-upgrades": {
       "floors": [

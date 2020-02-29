@@ -12,12 +12,13 @@ import build_icon from './images/build-icon.png';
 import build_icon_selected from './images/build-icon-selected.png';
 import upgrades_icon from './images/upgrades-icon.png';
 import upgrades_icon_selected from './images/upgrades-icon-selected.png';
-import floor_animation from './images/Floor Animation.gif';
 
 import Sky from "./Sky";
 import Upgrades from "./Upgrades";
 import Outdoor from "./Outdoor";
 import Stats from "./Stats";
+import Swiper from "react-id-swiper";
+import Tutorial from "./Tutorial";
 
 let startingCash = 500;
 
@@ -34,6 +35,8 @@ class App extends Component {
       maintenanceExpenses: 0,
       maintenanceExpensesSec: 0,
 
+      companyName: '',
+      tutorial: true,
       multiplier: 1,
       display: 0,
       floorCount: [],
@@ -51,22 +54,22 @@ class App extends Component {
     };
   }
 
-  grossProfitTime = ()=>{
+  grossProfitTime = () => {
     let current = this.state.totalCash;
-    this.grossTimeInterval = setTimeout(()=>{
+    this.grossTimeInterval = setTimeout(() => {
       let dif = this.state.totalCash - current;
-      this.setState({totalCashSec: dif/2});
+      this.setState({totalCashSec: dif / 2});
       this.grossProfitTime();
-    },2000)
+    }, 2000)
   };
 
-  grossMaintenanceTime = ()=>{
+  grossMaintenanceTime = () => {
     let current = this.state.maintenanceExpenses;
-    this.bmaintananceTimeInterval = setTimeout(()=>{
+    this.bmaintananceTimeInterval = setTimeout(() => {
       let dif = this.state.maintenanceExpenses - current;
-      this.setState({maintenanceExpensesSec: dif/2});
+      this.setState({maintenanceExpensesSec: dif / 2});
       this.grossMaintenanceTime();
-    },2000)
+    }, 2000)
   };
 
 
@@ -116,6 +119,10 @@ class App extends Component {
     }
   };
 
+  play = (name) => {
+    this.setState({tutorial: false, companyName: name});
+  };
+
   componentDidMount() {
     this.grossMaintenanceTime();
     this.grossProfitTime();
@@ -124,37 +131,45 @@ class App extends Component {
   render() {
     return (
       <div className='container'>
-        <div className='infoBar'>{'$' + this.state.cash}</div>
-        <div className={`${this.state.display === 0 ? '' : 'hide'} game`}>
-          {this.state.floors}
-          <Outdoor/>
-          <Sky/>
-        </div>
+        {this.state.tutorial ?
+          <Tutorial play={this.play}/>
+          :
+          <>
+            <div className='infoBar'>{'$' + this.state.cash}</div>
+            <div className={`${this.state.display === 0 ? '' : 'hide'} game`}>
+              {this.state.floors}
+              <Outdoor companyName={this.state.companyName}/>
+              <Sky/>
+            </div>
 
-        <Upgrades show={this.state.display === 1} purchaseUpgrade={this.purchaseUpgrade} upgrades={Koji.config["floors-and-upgrades"].upgrades}/>
+            <Upgrades show={this.state.display === 1} purchaseUpgrade={this.purchaseUpgrade} upgrades={Koji.config["floors-and-upgrades"].upgrades}/>
 
-        <Buildings show={this.state.display === 2} purchaseFloor={this.purchaseFloor} floors={Koji.config["floors-and-upgrades"].floors} floorCount={this.floorCount}
-                   florCounut={this.state.floorCount}/>
+            <Buildings show={this.state.display === 2} purchaseFloor={this.purchaseFloor} floors={Koji.config["floors-and-upgrades"].floors} floorCount={this.floorCount}
+                       florCounut={this.state.floorCount}/>
 
-        <Stats show={this.state.display === 3}
-               totalCash={this.state.totalCash} totalCashSec={this.state.totalCashSec} constructionExpenses={this.state.constructionExpenses} upgradeExpenses={this.state.upgradeExpenses}
-               maintenanceExpenses={this.state.maintenanceExpenses} maintananceSec={this.state.maintenanceExpensesSec}/>
+            <Stats show={this.state.display === 3}
+                   totalCash={this.state.totalCash} totalCashSec={this.state.totalCashSec} constructionExpenses={this.state.constructionExpenses}
+                   upgradeExpenses={this.state.upgradeExpenses}
+                   maintenanceExpenses={this.state.maintenanceExpenses} maintananceSec={this.state.maintenanceExpensesSec}/>
 
-        <div className='toolbar'>
-          <div className='item' onClick={() => this.setState({display: this.state.display === 1 ? 0 : 1})}>
-            <div className={`${this.state.display === 1 ? 'selected' : ''}`}><img alt='' src={this.state.display === 1 ? upgrades_icon_selected : upgrades_icon}/></div>
-          </div>
-          <div className='item' onClick={() => {
-            this.setState({display: this.state.display === 2 ? 0 : 2});
-            let event = new Event('update');
-            window.dispatchEvent(event);
-          }}>
-            <div className={`${this.state.display === 2 ? 'selected' : ''}`}><img alt='' src={this.state.display === 2 ? build_icon_selected : build_icon}/></div>
-          </div>
-          <div className='item' onClick={() => this.setState({display: this.state.display === 3 ? 0 : 3})}>
-            <div className={`${this.state.display === 3 ? 'selected' : ''}`}><img alt='' src={this.state.display === 3 ? stats_icon_selected : stats_icon}/></div>
-          </div>
-        </div>
+            <div className='toolbar'>
+              <div className='item' onClick={() => this.setState({display: this.state.display === 1 ? 0 : 1})}>
+                <div className={`${this.state.display === 1 ? 'selected' : ''}`}><img alt='' src={this.state.display === 1 ? upgrades_icon_selected : upgrades_icon}/></div>
+              </div>
+              <div className='item' onClick={() => {
+                this.setState({display: this.state.display === 2 ? 0 : 2});
+                let event = new Event('update');
+                window.dispatchEvent(event);
+              }}>
+                <div className={`${this.state.display === 2 ? 'selected' : ''}`}><img alt='' src={this.state.display === 2 ? build_icon_selected : build_icon}/></div>
+              </div>
+              <div className='item' onClick={() => this.setState({display: this.state.display === 3 ? 0 : 3})}>
+                <div className={`${this.state.display === 3 ? 'selected' : ''}`}><img alt='' src={this.state.display === 3 ? stats_icon_selected : stats_icon}/></div>
+              </div>
+            </div>
+          </>
+        }
+
       </div>
     );
   }

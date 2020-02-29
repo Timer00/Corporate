@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-//import Koji from '@withkoji/vcc';
-import Koji from './mock.json';
+
 import './App.css';
 
 function collision(a, b, type) {

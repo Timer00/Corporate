@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
 import Swiper from 'react-id-swiper';
-//import Koji from '@withkoji/vcc';
-import Koji from './mock.json';
-
-import building_cafe from './images/building-icon-cafe.png';
-import floor_animation from './images/Floor Animation.gif';
 
 import 'swiper/css/swiper.css';
 

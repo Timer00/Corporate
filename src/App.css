@@ -6,6 +6,9 @@ html, body, #root {
   overscroll-behavior: contain;
 
   font-family: "Courier New", monospace;
+
+  --swiper-theme-color: #000000;
+  --background-color: #FFFFFF;
 }
 
 * {
@@ -31,8 +34,124 @@ html, body, #root {
   display: flex;
   flex-direction: column;
 
-  background-color: white;
+  background-color: var(--background-color);
 }
+
+.container > .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.tutorial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 3px solid black;
+}
+
+.tutorial-container {
+  width: 40vh;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.tutorial-container-last {
+  width: 40vh;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.tutorial-container > .tutorial-cost {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.tutorial-cost-value {
+  font-size: 8vh;
+}
+
+.tutorial-container > .tutorial-item {
+  flex: 4;
+  border: 5px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.tutorial-item > .tutorial-item-title {
+  flex: 2;
+
+  font-size: 5vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tutorial-item > .tutorial-item-icon {
+  flex: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tutorial-item-icon > img {
+  width: 100%;
+  height: 100%;
+}
+
+.tutorial-item-icon > input {
+  width: 80%;
+  height: 60%;
+
+  text-align: center;
+
+  font-size: 150%;
+}
+
+.tutorial-item > .tutorial-item-info-text {
+  flex: 7;
+  display: flex;
+  font-size: 15px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.tutorial-item > .tutorial-item-info {
+  flex: 1;
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+.tutorial-item-info > span {
+  width: 90%;
+}
+
+.tutorial-container > .tutorial-purchase {
+  flex: 1;
+  border: 5px solid black;
+  border-top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 5vh;
+  font-weight: bold;
+}
+
+
+
+
 
 .infoBar {
   position: absolute;
@@ -46,7 +165,7 @@ html, body, #root {
   align-items: center;
 
   border: 2px solid black;
-  background-color: white;
+  background-color: var(--background-color);
 }
 
 .upgrades {
@@ -76,7 +195,7 @@ html, body, #root {
   flex: 8;
 
   font-weight: bold;
-  font-size: 5vw;
+  font-size: 200%;
 
   display: flex;
   justify-content: center;
@@ -191,9 +310,10 @@ html, body, #root {
   flex: 5;
 }
 
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next, .swiper-button-prev , .swiper-pagination-bullet{
   color: black !important;
 }
+
 
 .buildings > .swiper-container {
   height: 100%;

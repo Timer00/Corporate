@@ -1,11 +1,4 @@
 import React, { Component } from 'react';
-import Swiper from 'react-id-swiper';
-//import Koji from '@withkoji/vcc';
-import Koji from './mock.json';
-
-import upgrade_mush from './images/upgrades-icon-mushroom.png'
-
-import 'swiper/css/swiper.css';
 
 import './App.css';
 
