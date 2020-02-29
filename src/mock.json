@@ -1,0 +1,196 @@
+{
+  "config": {
+    "colors": {
+      "backgroundColor": "#FFFFFF",
+      "lifeContainerInnerColor": "#FFFFFF",
+      "lifeContainerOuterColor": "rgb(0,191,255)",
+      "healingEffectColor": "#FFFFFF",
+      "shipOuterColor": "black",
+      "shipInnerColor": "red",
+      "bulletColor": "red",
+      "asteroidColor": "#828483",
+      "cannonColor": "red",
+      "particles": "black"
+    },
+    "images": {
+      "canon": "http://timer00.github.io/Asteroids/imagens/canon.png",
+      "healthContainerUpgrade": "http://timer00.github.io/Asteroids/imagens/health container.png",
+      "heart": "http://timer00.github.io/Asteroids/imagens/heart.png",
+      "logoFull": "http://timer00.github.io/Asteroids/imagens/logoFull.png",
+      "shipUpgrades": "http://timer00.github.io/Asteroids/imagens/ship.png",
+      "shrink": "http://timer00.github.io/Asteroids/imagens/shrink.png",
+      "speed": "http://timer00.github.io/Asteroids/imagens/speed.png",
+      "asteroid": "",
+      "ship": "",
+      "bullet": "http://timer00.github.io/Asteroids/imagens/speed.png",
+      "healthContainer": "",
+      "background": "http://timer00.github.io/Asteroids/imagens/background.png"
+    },
+    "strings": {
+      "playButton": "Play",
+      "shipUpgrades": "Ship Upgrades",
+      "healingUpgrades": "Healing Upgrades",
+      "gameOver": "Game Over",
+      "seconds": "Seconds",
+      "health": "Life",
+      "money": "Money",
+      "playAgain": "-Play Again-",
+      "survived": "Survived",
+      "instructionsMovement": "WASD, Arrow keys or Touch to MOVE",
+      "instructionsShooting": "Left click, space or Touch to SHOOT"
+    },
+    "floors-and-upgrades": {
+      "floors": [
+        {
+          "title": "CAFE",
+          "cost": 200,
+          "icon": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/am2o5-buildingiconcafe.png",
+          "image": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/n9bqu-FloorAnimation.gif",
+          "profitRate": 5,
+          "lossRate": 2
+        },
+        {
+          "title": "PIZZA",
+          "cost": 100,
+          "icon": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/am2o5-buildingiconcafe.png",
+          "image": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/qrpvj-computerlabanimation.gif",
+          "profitRate": 3,
+          "lossRate": 2
+        }
+      ],
+      "upgrades": [
+        {
+          "title": "MUSHROOM",
+          "cost": 200,
+          "icon": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/vbhfy-upgradesiconmushroom.png",
+          "multiplier": 2
+        },
+        {
+          "title": "PUMPS",
+          "cost": 100,
+          "icon": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/am2o5-buildingiconcafe.png",
+          "multiplier": 3
+        },
+        {
+          "title": "SHIP",
+          "cost": 5000,
+          "icon": "http://timer00.github.io/Asteroids/imagens/ship.png",
+          "multiplier": 10
+        }
+      ]
+    },
+      "@@editor": [
+        {
+          "key": "floors-and-upgrades",
+          "name": "floors and Upgrades",
+          "icon": "🎨",
+          "source": "floors-and-upgrades.json",
+          "fields": [
+            {
+              "key": "floors",
+              "name": "Floors",
+              "description": "Floors you can buy",
+              "type": "object<Floor>[]",
+              "arrayOptions": {
+                "min": 1,
+                "addItemLabel": "Add floors"
+              },
+              "typeOptions": {
+                "Floor": {
+                  "title": {
+                    "name": "Title",
+                    "description": "Name of the floor at the store",
+                    "type": "text"
+                  },
+                  "icon": {
+                    "name": "Icon",
+                    "description": "Icon for the floor in the Store",
+                    "type": "image"
+                  },
+                  "image": {
+                    "name": "Image",
+                    "description": "Image to use for the floor animation",
+                    "type": "image"
+                  },
+                  "cost": {
+                    "name": "Cost",
+                    "type": "range",
+                    "description": "Cost to build the floor",
+                    "typeOptions": {
+                      "min": 1,
+                      "max": 100000,
+                      "step": 1
+                    }
+                  },
+                  "profitRate": {
+                    "name": "Rate of Profit",
+                    "type": "range",
+                    "description": "Rate of profit per second of the floor",
+                    "typeOptions": {
+                      "min": 1,
+                      "max": 100000,
+                      "step": 1
+                    }
+                  },
+                  "lossRate": {
+                    "name": "Rate of Loss",
+                    "description": "Rate of loss per second of the floor, maintenance cost",
+                    "type": "range",
+                    "typeOptions": {
+                      "min": 1,
+                      "max": 100000,
+                      "step": 1
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "key": "upgrades",
+              "name": "Upgrades",
+              "description": "Upgrades you can buy",
+              "type": "object<Upgrade>[]",
+              "arrayOptions": {
+                "min": 1,
+                "addItemLabel": "Add upgrades"
+              },
+              "typeOptions": {
+                "Floor": {
+                  "title": {
+                    "name": "Title",
+                    "description": "Name of the upgrade at the store",
+                    "type": "text"
+                  },
+                  "icon": {
+                    "name": "Icon",
+                    "description": "Icon for the upgrade in the Store",
+                    "type": "image"
+                  },
+                  "cost": {
+                    "name": "Cost",
+                    "type": "range",
+                    "description": "Cost to purchase the upgrade",
+                    "typeOptions": {
+                      "min": 1,
+                      "max": 100000,
+                      "step": 1
+                    }
+                  },
+                  "multiplier": {
+                    "name": "Multiplier on the profit",
+                    "type": "range",
+                    "description": "How much of an impact will the upgrade have in the profit",
+                    "typeOptions": {
+                      "min": 1,
+                      "max": 100000,
+                      "step": 1
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+  }
+}
