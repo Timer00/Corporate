@@ -1,0 +1,205 @@
+{
+  "floors_and_upgrades": {
+    "floors": [
+        {
+          "title": "CAFE",
+          "cost": 100,
+          "icon": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/am2o5-buildingiconcafe.png",
+          "image": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/xhclc-cafe.gif",
+          "profitRate": 2,
+          "lossRate": 1
+        },
+        {
+          "title": "HAMBURGERIE",
+          "cost": 200,
+          "icon": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/kpfye-hambargaicon.png",
+          "image": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/wu6ns-hamburguer.gif",
+          "profitRate": 4,
+          "lossRate": 2
+        },
+        {
+          "title": "FACTORY",
+          "icon": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/8qt87-fabricosaicon.png",
+          "image": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/w6znf-factory.gif",
+          "cost": 400,
+          "profitRate": 5,
+          "lossRate": 1
+        },
+        {
+          "title": "MINERAL MINE",
+          "icon": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/7419z-minecrafticon.png",
+          "image": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/oxq68-minecraft.gif",
+          "cost": 800,
+          "profitRate": 6,
+          "lossRate": 1
+        },
+        {
+          "title": "COMPUTER LAB",
+          "icon": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/impwo-monitoricon.png",
+          "image": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/0zwar-computerlabanimation.gif",
+          "cost": 1000,
+          "profitRate": 9,
+          "lossRate": 1
+        },
+        {
+          "title": "CUISINE",
+          "icon": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/egy6p-carrotoicon.png",
+          "image": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/4efk7-water.gif",
+          "cost": 600,
+          "profitRate": 6,
+          "lossRate": 1
+        },
+        {
+          "title": "MARKETING",
+          "icon": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/uukce-STONKSicon.png",
+          "image": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/gb7ks-marketing.gif",
+          "cost": 1500,
+          "profitRate": 10,
+          "lossRate": 2
+        },
+        {
+          "title": "WIZARDRY",
+          "icon": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/83frq-magosoicon.png",
+          "image": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/pttzn-wizard.gif",
+          "cost": 2000,
+          "profitRate": 15,
+          "lossRate": 2
+        },
+        {
+          "title": "TP DELIVERY",
+          "icon": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/c59gv-tardisicon.png",
+          "image": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/2pn6n-teleport.gif",
+          "cost": 3000,
+          "profitRate": 20,
+          "lossRate": 2
+        }
+      ],
+      "upgrades": [
+        {
+          "title": "MUSHROOM",
+          "cost": 200,
+          "icon": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/vbhfy-upgradesiconmushroom.png",
+          "multiplier": 1.1
+        },
+        {
+          "title": "PUMPS",
+          "cost": 10000,
+          "icon": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/am2o5-buildingiconcafe.png",
+          "multiplier": 2
+        }
+      ]
+    },
+  "@@editor": [
+    {
+      "key": "floors_and_upgrades",
+      "name": "floors and Upgrades",
+      "icon": "🚀",
+      "source": "floors-and-upgrades.json",
+      "fields": [
+        {
+          "key": "floors",
+          "name": "Floors",
+          "description": "Floors you can buy",
+          "type": "object<Floor>[]",
+          "arrayOptions": {
+            "min": 1,
+            "addItemLabel": "Add floors"
+          },
+          "typeOptions": {
+            "Floor": {
+              "title": {
+                "name": "Title",
+                "description": "Name of the floor at the store",
+                "type": "text"
+              },
+              "icon": {
+                "name": "Icon",
+                "description": "Icon for the floor in the Store",
+                "type": "image"
+              },
+              "image": {
+                "name": "Image",
+                "description": "Image to use for the floor animation",
+                "type": "image"
+              },
+              "cost": {
+                "name": "Cost",
+                "type": "range",
+                "description": "Cost to build the floor",
+                "typeOptions": {
+                  "min": 1,
+                  "max": 100000,
+                  "step": 1
+                }
+              },
+              "profitRate": {
+                "name": "Rate of Profit",
+                "type": "range",
+                "description": "Rate of profit per second of the floor",
+                "typeOptions": {
+                  "min": 1,
+                  "max": 100000,
+                  "step": 1
+                }
+              },
+              "lossRate": {
+                "name": "Rate of Loss",
+                "description": "Rate of loss per second of the floor, maintenance cost",
+                "type": "range",
+                "typeOptions": {
+                  "min": 1,
+                  "max": 100000,
+                  "step": 1
+                }
+              }
+            }
+          }
+        },
+        {
+          "key": "upgrades",
+          "name": "Upgrades",
+          "description": "Upgrades you can buy",
+          "type": "object<Upgrade>[]",
+          "arrayOptions": {
+            "min": 1,
+            "addItemLabel": "Add upgrades"
+          },
+          "typeOptions": {
+            "Upgrade": {
+              "title": {
+                "name": "Title",
+                "description": "Name of the upgrade at the store",
+                "type": "text"
+              },
+              "icon": {
+                "name": "Icon",
+                "description": "Icon for the upgrade in the Store",
+                "type": "image"
+              },
+              "cost": {
+                "name": "Cost",
+                "type": "range",
+                "description": "Cost to purchase the upgrade",
+                "typeOptions": {
+                  "min": 1,
+                  "max": 100,
+                  "step": 0.1
+                }
+              },
+              "multiplier": {
+                "name": "Multiplier on the profit",
+                "type": "range",
+                "description": "How much of an impact will the upgrade have in the profit",
+                "typeOptions": {
+                  "min": 1,
+                  "max": 100,
+                  "step": 0.1
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "images": {
+    "tutorial_icon": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/hu1rc-tutorial1.png",
+      "tutorial_icon_2": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/ucrnh-tutorial2.png",
+      "upgrades_icon": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/jztnf-upgradesicon.png",
+      "upgrades_icon_selected": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/scac2-upgradesiconselected.png",
+      "build_icon": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/lrk8w-buildicon.png",
+      "build_icon_selected": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/aq40q-buildiconselected.png",
+      "stats_icon": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/tcxaa-statsicon.png",
+      "stats_icon_selected": "https://images.koji-cdn.com/a92cc22d-0ae9-434a-bbbb-65327b2b656b/5sobe-statsiconselected.png"
+  },
+  "@@editor": [
+    {
+      "key": "images",
+      "name": "Images",
+      "icon": "📸",
+      "source": "images.json",
+      "fields": [
+        {
+          "key": "tutorial_icon",
+          "name": "Tutorial Icon page 1",
+          "type": "image"
+        },
+        {
+          "key": "tutorial_icon_2",
+          "name": "Tutorial Icon page 2",
+          "type": "image"
+        },
+        {
+          "key": "upgrades_icon",
+          "name": "Upgrades icon",
+          "type": "image"
+        },
+        {
+          "key": "upgrades_icon_selected",
+          "name": "Upgrades icon selected",
+          "type": "image"
+        },
+        {
+          "key": "build_icon",
+          "name": "Build icon",
+          "type": "image"
+        },
+        {
+          "key": "build_icon_selected",
+          "name": "Build icon selected",
+          "type": "image"
+        },
+        {
+          "key": "stats_icon",
+          "name": "Stats icon",
+          "type": "image"
+        },
+        {
+          "key": "stats_icon_selected",
+          "name": "Stats icon selected",
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}

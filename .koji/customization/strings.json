@@ -1,0 +1,154 @@
+{
+  "strings": {
+    "upgrades": "UPGRADES",
+      "stats": "STATS",
+      "statistics": "STATISTICS",
+      "totalMoney": "Total money earned:",
+      "constructionSpent": "Construction expenses",
+      "upgradesSpent": "Upgrade expenses",
+      "maintenanceSpent": "Maintenance Expenses",
+      "netProfit": "NET PROFIT",
+      "revenueExpenditure": "REVENUE and EXPENDITURE",
+      "gross": "Gross per sec",
+      "maintenanceSec": "Maintenance per sec",
+      "netIncome": "Net income per sec",
+      "purchase": "PURCHASE",
+      "tutorial_title_1": "TUTORIAL",
+      "tutorial_title_2": "TUTORIAL",
+      "tutorial_title_3": "INPUT",
+      "tutorial_subtitle_1": "CONTROLS",
+      "tutorial_subtitle_2": "GAMEPLAY",
+      "tutorial_subtitle_3": "COMPANY NAME",
+      "tutorial_button_1": "NEXT",
+      "tutorial_button_2": "NEXT",
+      "tutorial_button_3": "PLAY",
+      "tutorial_text_1": "The game has only simple buttons that can be clicked via mouse or touch.",
+      "tutorial_text_2": "Your objective is to build the tallest tower possible without going bankrupt. Buy upgrades to keep the money inflow and keep buying new floors!",
+      "tutorial_text_3": "Finally, write a name for your company! (max 12 characters)"
+  },
+  "@@editor": [
+    {
+      "key": "strings",
+      "name": "Strings",
+      "icon": "📚",
+      "source": "strings.json",
+      "fields": [
+        {
+          "key": "stats",
+          "name": "Stats top of page text",
+          "type": "text"
+        },
+        {
+          "key": "totalMoney",
+          "name": "Total money text",
+          "type": "text"
+        },
+        {
+          "key": "constructionSpent",
+          "name": "Construction spent text",
+          "type": "text"
+        },
+        {
+          "key": "upgradesSpent",
+          "name": "Upgrades Spent text",
+          "type": "text"
+        },
+        {
+          "key": "maintenanceSpent",
+          "name": "Maintenance Spent text",
+          "type": "text"
+        },
+        {
+          "key": "netProfit",
+          "name": "Stats money text",
+          "type": "text"
+        },
+        {
+          "key": "revenueExpenditure",
+          "name": "Revenue expediture text",
+          "type": "text"
+        },
+        {
+          "key": "gross",
+          "name": "Gross income sec text",
+          "type": "text"
+        },
+        {
+          "key": "maintenanceSec",
+          "name": "Maintenance cost sec text",
+          "type": "text"
+        },
+        {
+          "key": "netIncome",
+          "name": "Net income sec text",
+          "type": "text"
+        },
+        {
+          "key": "purchase",
+          "name": "Purchase button text",
+          "type": "text"
+        },
+        {
+          "key": "tutorial_title_1",
+          "name": "Tutorial title 1",
+          "type": "text"
+        },
+        {
+          "key": "tutorial_title_2",
+          "name": "Tutorial title 2",
+          "type": "text"
+        },
+        {
+          "key": "tutorial_title_3",
+          "name": "Tutorial title 3",
+          "type": "text"
+        },
+        {
+          "key": "tutorial_subtitle_1",
+          "name": "Tutorial subtitle 1",
+          "type": "text"
+        },
+        {
+          "key": "tutorial_subtitle_2",
+          "name": "Tutorial subtitle 2",
+          "type": "text"
+        },
+        {
+          "key": "tutorial_subtitle_3",
+          "name": "Tutorial subtitle 3",
+          "type": "text"
+        },
+        {
+          "key": "tutorial_button_1",
+          "name": "Tutorial button 1",
+          "type": "text"
+        },
+        {
+          "key": "Tutorial button 2",
+          "name": "Tutorial button 2",
+          "type": "text"
+        },
+        {
+          "key": "tutorial_button_3",
+          "name": "Tutorial button 3",
+          "type": "text"
+        },
+        {
+          "key": "tutorial_text_1",
+          "name": "Tutorial text 1",
+          "type": "text"
+        },
+        {
+          "key": "tutorial_text_2",
+          "name": "Tutorial text 2",
+          "type": "text"
+        },
+        {
+          "key": "tutorial_text_3",
+          "name": "Tutorial text 3",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}
