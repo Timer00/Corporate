@@ -1,6 +1,6 @@
 # Corporate - Prototype Game
 
-Corporate is freelance project built by Theo Carrara for the Koji startup from the company GoMeta.
+Corporate is a freelance project built by Theo Carrara for the Koji startup from the company GoMeta.
 
 It is a good display of my coding skills in React, Javascript, node.js, CSS3 and HTML5 Canvas.
 
