@@ -1,9 +1,15 @@
-# Simple React Scaffold
+# Corporate - Prototype Game
 
-Welcome to your new Koji React Project.
+Corporate is freelance project built by Theo Carrara for the Koji startup from the company GoMeta.
 
-# Where to go
-1. Your Frontend code is located at `/frontend`
-2. There are some simple customization options to help you learn how the VCCs work
-    - [Colors](#~/.koji/customization/colors.json!visual) - Change the text color, background color, & link text color.
-    - [Images](#~/.koji/customization/images.json!visual) - Change the spinning icon.
+It is a good display of my coding skills in React, Javascript, node.js, CSS3 and HTML5 Canvas.
+
+# Online
+You may find an online version of the project following this URL: https://withkoji.com/~TheoCarrara/corporate
+
+# Installation
+1. Get into `/frontend` folder
+2. Run `npm install`
+3. Then `npm run start-windows` (even if you are on another OS)
+
+By default, you may access the project typing http://localhost:8080/ into your browser. 
